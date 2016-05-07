@@ -1,7 +1,7 @@
 Django==1.9.6
 django-allauth==0.24.1
 django-rest-auth==0.7.0
-djangorestframework==3.3.2
+djangorestframework==3.3.3
 MySQL-python==1.2.5
 numpy==1.10.4
 oauthlib==1.0.3
