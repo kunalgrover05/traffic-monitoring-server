@@ -101,10 +101,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'dreamers.urls'
+ROOT_URLCONF = 'traffic-monitoring.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'dreamers.wsgi.application'
+WSGI_APPLICATION = 'traffic-monitoring.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -124,7 +124,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'main',
-    'rest_framework'
+    'allauth',
+    'rest_framework',    
+    'rest_framework.authtoken',
+    'rest_auth'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -157,7 +160,8 @@ LOGGING = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-       'rest_framework.permissions.AllowAny',
-    ]
+'DEFAULT_PERMISSION_CLASSES': (
+   'rest_framework.permissions.AllowAny',
+),
+    'PAGE_SIZE': 10
 }
